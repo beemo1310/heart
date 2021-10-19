@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function TinhTien(){
+            var x=window.document.nhap.timein.value;
+            if(x<=1){
+                window.document.nhap.total.value = 15000;
+            }
+            if(x>1&&x<=5){
+                window.document.nhap.total.value = x*12000;
+            }
+            if(x>=6){
+                window.document.nhap.total.value = x*9000;
+            }
+            if(x>=140){
+                window.document.nhap.total.value = x*9000*82/100;
+            }
+        }
+    </script>
+</head>
+<body>
+    <table style="width : 30% " border="1" align="center" >
+        <form name="nhap">
+            <tr>
+                <th colspan="2">Chương trình tính tiền taxi</th>  
+            </tr>
+            <tr>
+                <td align="center">Số km đã đi được</td>
+                <td align="center"><input type=text name="timein"></td>
+            </tr>
+            <tr>
+                <td align="center">Tiền thanh toán</td>
+                <td align="center"><input type=text name="total"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" value="Xóa">
+                    <input type="button" onclick="TinhTien();" value="Tính tiền">
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+</html>
